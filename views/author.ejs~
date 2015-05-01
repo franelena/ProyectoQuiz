@@ -9,10 +9,9 @@
     <h1>Sea vuestra merced bienvenida a <%= title %></h1>
     <p>Aquí podréis crear vuestros propios divertimentos</p>
 
-	<p><a href="/quizes/question">Comienzad a divertiros</a></p>
-
     <footer>
 		<p><a href="https://github.com/franelena/ProyectoQuiz.git">Acceda vuestra merced a nuestro proyecto en GitHub aquí</a></p>
 	</footer>
   </body>
 </html>
+
