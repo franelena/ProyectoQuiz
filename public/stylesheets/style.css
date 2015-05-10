@@ -14,13 +14,13 @@ body{
 #page-wrap{
 
 	margin: 2% auto;
-	color: white;
+	color: grey;
 
 }
 
 #page-wrap > .main{
 
-	border: 1px solid #999;
+	border: 1px solid #DFF79E;
 	padding: 1%;
 	margin-bottom: 1px;
 	color: black;
@@ -33,14 +33,18 @@ section > div{
 
 header, nav, section{
 
-	background: #EEE;
+	background: #CCEC75;
 	text-align: center;
 
 }
 
+header{
+	font-variant: small-caps;
+}
+
 footer{
 
-	background: #EEE;
+	background: #CCEC75;
 	text-align: center;
 
 }
