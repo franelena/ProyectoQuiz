@@ -32,16 +32,26 @@ exports.index = function(req,res){
 //GET /quizes/:id
 exports.show = function(req, res){
 	
-	res.render('quizes/show', {quiz: req.quiz})
+	models.Quiz.find(req.params.quizId).then(function(quiz) {
+	res.render('quizes/show', {quiz: quiz})
+
+})
 	
 };
 
 //GET /quizes/:id/answer
 exports.answer = function(req, res){
-	var resultado = 'Incorrecto';
+
+	models.Quiz.find(req.params.quizId).then(function(quiz) {
+	//var resultado = 'Incorrecto';
 	if(req.query.respuesta === req.quiz.respuesta){
-		resultado = 'Correcto';
-	}
-	res.render('quizes/answer', {quiz: req.quiz, respuesta: resultado});
+		//resultado = 'Correcto';
+		res.render('quizes/answer', {quiz: quiz, respuesta: 'Correcto'});
 			
+	} else {
+
+	res.render('quizes/answer', {quiz: quiz, respuesta: 'Incorrecto'});
+	
+	}
+  })			
 };
